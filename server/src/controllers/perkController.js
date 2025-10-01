@@ -4,7 +4,7 @@ import { Perk } from '../models/Perk.js';
 // validation schema for creating/updating a perk
 const perkSchema = Joi.object({
   // check that title is at least 2 characters long, and required
-  title: Joi.string().min(2).required(),
+  title: Joi.string().min(2),
   // description is optional
   description: Joi.string().allow(''),
   // category must be one of the defined values, default to 'other'
